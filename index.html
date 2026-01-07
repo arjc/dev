@@ -10,22 +10,119 @@
   </head>
   <body class="bg-black text-white min-h-screen flex flex-col">
     <!-- Bubble -->
-        <div class="absolute flex flex-row items-center gap-2 bg-black border border-white rounded-[10px] px-4 py-2 top-4 left-4 shadow-lg">
-          <a href="#/" class="flex items-center gap-2 no-underline">
-            <img src="assets/face.webp" alt="achu" class="h-12 rounded-full" />
-            <span class="text-white text-2xl font-bold">Dev</span>
-          </a>
+    <a
+      href="https://www.arjc.me"
+      class="flex items-center gap-2 no-underline absolute flex flex-row items-center gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
+    >
+      <img src="assets/face.webp" alt="achu" class="h-10 rounded-full m-0" />
+      <span class="text-white text-2xl font-bold">Dev</span>
+    </a>
+
+    <!-- Vishayam -->
+    <div
+      class="min-w-screen min-h-screen flex flex-row-reverse justify-between p-0 m-0 gap-0"
+    >
+      <!-- right side bar -->
+      <div
+        class="flex flex-col w-[34vw] h-screen bg-[#0009] items-left p-10 overflow-y-scroll sbar-hide border-dashed border-l-[2px] border-gray-300"
+      >
+        <!-- profile -->
+        <h1>About me ~></h1>
+        <div
+          class="flex items-center justify-between bg-black my-5 xl:flex-row flex-col-reverse"
+        >
+          <h1 class="m-5 text-3xl font-bold max-w-[5em]">
+            Arjun M Liji
+            <span class="pl-2 text-[1rem] text-gray-500">(18)</span>
+            <span
+              class="text-[1rem] text-gray-500 inline-flex items-center gap-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 
+                    7.5H.5a.5.5 0 0 0 0 1h.518A7 7 0 0 0 7.5 
+                    14.982v.518a.5.5 0 0 0 1 0v-.518A7 7 0 0 0 
+                    14.982 8.5h.518a.5.5 0 0 0 0-1h-.518A7 7 0 0 0 8.5 
+                    1.018zm-6.48 7A6 6 0 0 1 7.5 2.02v.48a.5.5 0 0 0 1 
+                    0v-.48a6 6 0 0 1 5.48 5.48h-.48a.5.5 0 0 0 0 
+                    1h.48a6 6 0 0 1-5.48 5.48v-.48a.5.5 0 0 0-1 
+                    0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 
+                    0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+                ></path>
+              </svg>
+              Kochi, Kerala
+            </span>
+          </h1>
+          <img
+            class="min-h-[200px] max-w-[180px]"
+            src="/assets/rayban.jpg"
+            alt="profile pic of achukuttan aka Arjun M Liji"
+          />
         </div>
 
-    <div class="w-screen min-h-screen flex flex-row-reverse">
-      <div class="flex">
-        <img src="" alt="">
-      </div>
-      <div class="flex-1 max-w-4xl mx-auto p-4 w-full">
+        <!-- desc -->
+        <p class="text-gray-300 p-2 text-sml">
+          >I am an 18 year old Computer Science Engineering student from Kerala,
+          India. <br />
+          <br />
+          >I'm specialized in React.js and am learning about backend development
+          with Node.js and Express.js. <br />
+          <br />
+          >I believe in outworking any obstacles that comes in my way with
+          discipline, smart planning, and persistence.
+        </p>
 
+        <br />
+        <br />
+        <br />
+        <!-- skill -->
+        <h1>My Skills ~></h1>
+        <div>
+          <ul class="skill-list">
+            <b>Languages:</b>
+            <li>
+              <span class="text-blue-400">Ts/Javascript</span>
+              <span class="text-orange-500">HTML5</span>
+              <span class="text-blue-300">CSS5</span>
+              <span class="text-yellow-500">Python</span>
+              <span class="text-gray-100">C</span>
+            </li>
+            <b>Backend:</b>
+            <li>
+              <span class="text-blue-400">MySQL</span>
+              <span class="text-green-500">MongoDB</span>
+              <span class="text-gray-100">Expressjs</span>
+            </li>
+            <b>Frontend:</b>
+            <li>
+              <span class="text-blue-300">React</span>
+              <span class="text-cyan-400">Tailwind</span>
+              <span class="text-blue-700">Flutter</span>
+            </li>
+            <b>Tools & Platforms:</b>
+            <li>
+              <span class="text-red-400">Git</span>
+              <span class="text-cyan-500">Docker</span>
+              <span class="text-pink-400">Figma</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Jibesh balan was my mathematics teacher. He hated me-->
+      <div class="flex-1 w-[75vw] p-4 overflow-y-scroll sbar-hide">
+        <iframe
+          src="https://arjc-me-dev.vercel.app/"
+          class="w-full h-screen border-0"
+        ></iframe>
       </div>
     </div>
-      
-      <script src="script.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
