@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="../style/bg.css" />
+    <style>
+      body {
+        font-family: "JetBrains Mono", monospace;
+      }
+    </style>
+  </head>
+  <body
+    class="Isometric bg-[#111] text-white box-border min-h-screen w-screen m-0 p-0 font-mono flex flex-col-reverse md:flex-row justify-evenly items-center text-center gap-[2vh] md:gap-[1vw] py-[5vh] px-[5vw] md:p-0"
+  >
+    <a
+      href="/"
+      class="cursor-default flex items-center gap-2 no-underline absolute flex-row gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
+    >
+      <img
+        src="../assets/face.webp"
+        alt="achu"
+        class="h-10 rounded-full m-0 cursor-pointer"
+        onclick="window.open('https://www.arjc.me')"
+      />
+      <span class="text-white text-2xl font-bold">Dev</span>
+    </a>
+    <div class="max-w-[500px] flex flex-col items-center justify-evenly">
+      <h1 class="tracking-[0.4ch] text-2xl underline decoration-wavy">
+        Oru യമണ്ടൻ Password Generator
+      </h1>
+      <div class="pswd-display my-10">
+        <input type="text" id="pswdOut" value="Yamandan Password" class="text-black px-3 py-2 m-5 rounded">
+        <button onclick="cp()">Copy</button>
+      </div>
+
+      <h1>Password Options:</h1>
+      <div class="flex gap-3 text-left mx-auto mt-2 mb-5 flex-wrap items-center justify-center max-w-[400px]">
+        <div>
+            <input type="checkbox" id="repeat">
+            <label for="repeat" class="text-white">No repeat</label>
+        </div>
+        <div>
+            <input type="checkbox" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Yamandan" id="niggesh">
+            <label for="niggesh" class="text-white">Rathesh</label>
+        </div>
+    </div>
+    <button class="bg-gray-800 rounded p-5" onclick="generate()">Generate</button>
+
+    <script src="passwd.js"></script>
+  </body>
+</html>

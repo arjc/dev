@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line cut - 🔞Malyalam</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script src="../script/script.js" charset="utf-8"></script>
+</head>
+
+<body style="background: url(bg.jpg) no-repeat; background-size: cover; background-position: center;">
+  <div class="start">
+    <div style="font-size: 1.5em; margin: 2.5em 5em; color: #fff;">
+      <h1 style="margin-bottom: 0.75rem;">MALAYALAM BRAINROT MATCH 3</h1>
+      <ul class="inst-mob">
+        <li>Swipe the cells ⬆ ➡ ⬇ ⬅ with your finger to move</li>
+        <li>Match 3, 4, 5 similar cells to make them dissapear</li>
+        <li>One matched cell is worth 1 score</li>
+        <li>Try to match as much cell as possible in 60 seconds</li>
+      </ul>
+      <ul class="inst-desk">
+        <li>Drag and drop cells ⬆ ➡ ⬇ ⬅ to move</li>
+        <li>Match 3, 4, 5 similar cells to make them dissapear</li>
+        <li>One matched cell is worth 1 score</li>
+        <li>Try to match as much cell as possible in 60 seconds</li>
+      </ul>
+    </div>
+    <button class="baby" onclick="jibesh()">Start</button>
+  </div>
+  <!-- <div class="title">
+    <h1>Line cut!!! (Match 3)</h1>
+    <p>(prototype)</p>
+  </div> -->
+  <br>
+  <button class="homeBtn" onclick="window.location.href = '../'">⬅ Home</button>
+  <br>
+  <div class="scoreBoard">
+    <div class="score-container">
+      <h3>score</h3>
+      <p id="score">0</p>
+    </div>
+    <div class="score-container">
+      <h3>best</h3>
+      <p id="highScore">0</p>
+    </div>
+    <div class="timer-container">
+      <h3>time</h3>
+      <p id="timer">60</p>
+    </div>
+  </div>
+  <div class="grid"></div>
+  <br><br><br><br><br>
+  <!-- <a href="sixtwenty-achu">test voice</a> -->
+  <footer class="footer">
+    <p>Made with Chaya, kadi and sneham. By <a href="https://github.com/arjc">Arjun</a></p>
+  </footer>
+  <script>
+    const candyColors = [
+      "sprite/bharat.jpg",
+      "sprite/lal.png",
+      "sprite/lalu.jpg",
+      "sprite/mohanlal.png",
+      "sprite/raju.jpg",
+      "sprite/thangan.png",
+
+    ];
+
+    // Audio files for each candy type
+    const candySounds = {
+      0: "audio/bharat.m4a",
+      1: "audio/lal.m4a",
+      2: "audio/lalu.m4a",
+      3: "audio/mohanlal.mp3",
+      4: "audio/raju.mp3",
+      5: "audio/thangan.m4a",
+    };
+    const themeRank = [
+    { max: 5, msg: "Andi pongathon" },
+    { max: 15, msg: "Kundan" },
+    { max: 25, msg: "Kochukundan" },
+    { max: 35, msg: "Pandi Karimpara Polayadi" },
+    { max: 45, msg: "Polaydimon" },
+    { max: 55, msg: "Nayinte patti mon" },
+    { max: 65, msg: "Duplicate Indian Kazhuvarudamon" },
+    { max: 75, msg: "Rajumon Puthiyamugauu *" },
+    { max: 85, msg: "Moggerlal ⭐" },
+    { max: 95, msg: "⭐ Convincing Suresh ⭐" },
+    { max: 105, msg: "⭐⭐ STYLEN RAJU ⭐⭐" },
+    { max: 115, msg: "⭐⭐⭐ KOZHIKKODAN MOGGER ⭐⭐⭐" },
+    { max: 125, msg: "⭐⭐⭐⭐ JAAARAN JIMBRUTTAN ⭐⭐⭐⭐ (top 1%)" },
+    { max: Infinity, msg: "⭐⭐⭐⭐⭐ UNEMPLOYED UUMBAN ⭐⭐⭐⭐⭐ (POI PANI NOKK MYRE)" }
+];
+  </script>
+
+</body>
+
+</html>
