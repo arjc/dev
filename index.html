@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,39 +11,46 @@
       href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manjari:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="assets/face.webp" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="/assets/face.webp" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body class="bg-black text-white min-h-screen flex flex-col">
     <!-- Bubble -->
     <a
       href="/"
-      class="cursor-default flex items-center gap-2 no-underline absolute flex flex-row items-center gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
+      class="cursor-default no-underline absolute flex flex-row items-center gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
     >
       <img
-        src="assets/face.webp"
+        src="/assets/face.webp"
         alt="achu"
         class="h-10 rounded-full m-0 cursor-pointer"
         onclick="window.open('https://www.arjc.me')"
       />
       <span class="text-white text-2xl font-bold">Dev</span>
     </a>
+    <!-- poppy -->
+    <span
+      onclick="togglePortfolio(this)"
+      class="cursor-pointer xl:hidden fixed bg-[#1119] rounded-[25px] px-6 py-4 top-4 right-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
+    >
+      portfolio
+    </span>
 
     <!-- Vishayam -->
     <div
       class="min-w-screen min-h-screen flex flex-row-reverse justify-between p-0 m-0 gap-0"
     >
-      <!-- right side bar -->
+      <!-- right port bar -->
       <div
-        class="hidden lg:flex flex-col w-[34vw] h-screen bg-[#0009] items-left px-10 overflow-y-scroll sbar-hide border-dashed border-l-[2px] border-gray-300"
+        class="portfolio hidden xl:flex flex-col w-screen xl:w-[34vw] h-screen bg-[#0009] items-left px-10 overflow-y-scroll sbar-hide border-dashed border-l-2 border-gray-300"
       >
         <div
-          class="absolute rotate-90 text-[1em] -right-7 top-[50%] text-gray-500"
+          class="xl:absolute rotate-90 text-[1em] -right-7 top-[50%] text-gray-500"
         >
           scroll -&gt;
         </div>
         <!-- Hero -->
-        <div class="text-[3em] lg:text-[5em] wrap-normal my-10">
+        <div class="gap-5 xl:gap-0 text-[3em] lg:text-[5em] wrap-normal m-10 xl:my-10">
           <span
             class="reveal font-cursive font-medium text-[1.2em]"
             style="--delay: 200ms"
@@ -92,7 +99,7 @@
             </span>
           </h1>
           <img
-            class="min-h-[200px] max-w-[180px]"
+            class="min-h-10 max-w-[10em]"
             src="/assets/rayban.jpg"
             alt="profile pic of achukuttan aka Arjun M Liji"
           />
@@ -152,52 +159,107 @@
           </ul>
         </div>
       </div>
-      <!-- Jibesh balan was my mathematics teacher. He hated me-->
+
       <div
-        class="flex flex-col items-center justify-evenly w-screen xl:w-[75vw] overflow-y-scroll sbar-hide bg-[#0006]"
+        class="theOtherShi flex flex-col overflow-y-scroll h-screen sbar-hide xl:w-[75vw] l-0 w-screen gap-20 pb-20 bg-[#0006]"
       >
+      <br><br><br><br>
+        <!-- Jibesh balan was my mathematics teacher. He hated me-->
         <div
-          class="project-grid grid grid-cols-1 md:grid-cols-2 justify-evenly items-start gap-5 md:gap-10"
+          class="flex flex-col items-center justify-evenly"
         >
-          <div class="flex flex-col">
-            <h1>ALL</h1>
-            <h1>PROJECTS ~~></h1>
+          <div
+            class="project-grid grid grid-cols-1 md:grid-cols-2 justify-evenly items-start gap-5 md:gap-10"
+          >
+            <div class="flex flex-col">
+              <h1>ALL</h1>
+              <h1>PROJECTS ~~></h1>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Games</h1>
+              <a href="/match3"> 🍫 Custom Match 3 -></a>
+              <a href="/memory">🧠 Custom Memory -></a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Tutorials</h1>
+              <a href="https://nosebyte.github.io/solar/solar.html">
+                🐲 Python Ascii Animation ->
+              </a>
+              <a href="https://www.youtube.com/watch?v=k3nDLy6UTuk">
+                ⬇ Js Scroll Animation ->
+              </a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>IOT</h1>
+              <a href="https://nosebyte.github.io/solar/solar.html">
+                🔊 Arduino Buzzer songs ->
+              </a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>3D Projects</h1>
+              <a href="https://nosebyte.github.io/solar/solar.html">
+                🌌 Space orrery ->
+              </a>
+              <a href="/cube"> ⬢ ThreeD shapes -></a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Prototype / Designs</h1>
+              <a href="https://figma.com/arjc">🏫 School App prototype -></a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Archive</h1>
+              <a href="/counter">🔢 3D Counter -></a>
+              <a href="/calculator">🧮 Malayalam Calculator -></a>
+            </div>
           </div>
-          <div class="flex flex-col items-left justify-evenly">
-            <h1>Games</h1>
-            <a href="/match3"> 🍫 Custom Match 3 -></a>
-            <a href="/memory">🧠 Custom Memory -></a>
-          </div>
-          <div class="flex flex-col items-left justify-evenly">
-            <h1>Tutorials</h1>
-            <a href="https://nosebyte.github.io/solar/solar.html">
-              🐲 Python Ascii Animation ->
-            </a>
-            <a href="https://nosebyte.github.io/solar/solar.html">
-              ⬇ Js Scroll Animation ->
-            </a>
-          </div>
-          <div class="flex flex-col items-left justify-evenly">
-            <h1>IOT</h1>
-            <a href="https://nosebyte.github.io/solar/solar.html">
-              🔊 Arduino Buzzer songs ->
-            </a>
-          </div>
-          <div class="flex flex-col items-left justify-evenly">
-            <h1>3D Projects</h1>
-            <a href="https://nosebyte.github.io/solar/solar.html">
-              🌌 Space orrery ->
-            </a>
-            <a href="/cube"> ⬢ ThreeD shapes -></a>
-          </div>
-          <div class="flex flex-col items-left justify-evenly">
-            <h1>Prototype / Designs</h1>
-            <a href="https://figma.com/arjc">🏫 School App prototype -></a>
-          </div>
-          <div class="flex flex-col items-left justify-evenly">
-            <h1>Archive</h1>
-            <a href="/counter">🔢 3D Counter -></a>
-            <a href="/calculator">🧮 Malayalam Calculator -></a>
+        </div>
+        <!-- Jibesh balan was my mathematics teacher. He hated me-->
+        <div
+          class="flex flex-col items-center justify-evenly"
+        >
+          <div
+            class="project-grid grid grid-cols-1 md:grid-cols-2 justify-evenly items-start gap-5 md:gap-10"
+          >
+            <div class="flex flex-col">
+              <h1>ALL</h1>
+              <h1>PROJECTS ~~></h1>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Games</h1>
+              <a href="/match3"> 🍫 Custom Match 3 -></a>
+              <a href="/memory">🧠 Custom Memory -></a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Tutorials</h1>
+              <a href="https://nosebyte.github.io/solar/solar.html">
+                🐲 Python Ascii Animation ->
+              </a>
+              <a href="https://www.youtube.com/watch?v=k3nDLy6UTuk">
+                ⬇ Js Scroll Animation ->
+              </a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>IOT</h1>
+              <a href="https://nosebyte.github.io/solar/solar.html">
+                🔊 Arduino Buzzer songs ->
+              </a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>3D Projects</h1>
+              <a href="https://nosebyte.github.io/solar/solar.html">
+                🌌 Space orrery ->
+              </a>
+              <a href="/cube"> ⬢ ThreeD shapes -></a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Prototype / Designs</h1>
+              <a href="https://figma.com/arjc">🏫 School App prototype -></a>
+            </div>
+            <div class="flex flex-col items-left justify-evenly">
+              <h1>Archive</h1>
+              <a href="/counter">🔢 3D Counter -></a>
+              <a href="/calculator">🧮 Malayalam Calculator -></a>
+            </div>
           </div>
         </div>
       </div>
