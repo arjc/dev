@@ -1,90 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developer | Arjun M Liji</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manjari:wght@100;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="/assets/face.webp" />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body class="bg-black text-white min-h-screen flex flex-col">
-    <!-- Bubble -->
-    <a
-      href="/"
-      class="cursor-default no-underline absolute flex flex-row items-center gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
-    >
-      <img
-        src="/assets/face.webp"
-        alt="achu"
-        class="h-10 rounded-full m-0 cursor-pointer"
-        onclick="window.open('https://www.arjc.me')"
-      />
-      <span class="text-white text-2xl font-bold">Dev</span>
-    </a>
-    <!-- poppy -->
-    <span
-      onclick="togglePortfolio(this)"
-      class="cursor-pointer xl:hidden fixed bg-[#1119] rounded-[25px] px-6 py-4 top-4 right-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
-    >
-      portfolio
-    </span>
 
-    <!-- Vishayam -->
-    <div
-      class="min-w-screen min-h-screen flex flex-row-reverse justify-between p-0 m-0 gap-0"
-    >
-      <!-- right port bar -->
-      <div
-        class="portfolio hidden xl:flex flex-col w-screen xl:w-[34vw] h-screen bg-[#0009] items-left px-10 overflow-y-scroll sbar-hide border-dashed border-l-2 border-gray-300"
-      >
-        <div
-          class="xl:absolute rotate-90 text-[1em] -right-7 top-[50%] text-gray-500"
-        >
-          scroll -&gt;
-        </div>
-        <!-- Hero -->
-        <div class="gap-5 xl:gap-0 text-[3em] lg:text-[5em] wrap-normal m-10 xl:my-10">
-          <span
-            class="reveal font-cursive font-medium text-[1.2em]"
-            style="--delay: 200ms"
-          >
-            Arjun Liji
-          </span>
-          <span class="reveal text-gray-400" style="--delay: 300ms"
-            >&lt;DEV&gt;</span
-          >
-          <span class="reveal text-gray-400" style="--delay: 400ms"
-            >PORTFO- LIO</span
-          >
-        </div>
-        <!-- profile -->
-        <h1 class="reveal" style="--delay: 1300ms">About me ~~></h1>
-        <div
-          class="flex items-center justify-between bg-black my-5 xl:flex-row flex-col-reverse reveal"
-          style="--delay: 1200ms"
-        >
-          <h1 class="m-5 text-3xl font-bold max-w-[5em]">
-            Arjun M Liji
-            <span class="pl-2 text-[1rem] text-gray-500">(18)</span>
-            <span
-              class="text-[1rem] text-gray-500 inline-flex items-center gap-1"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer | Arjun M Liji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manjari:wght@100;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/assets/face.webp" />
+  <link rel="stylesheet" href="/style/base.css" />
+  <link rel="stylesheet" href="/style/layout.css" />
+  <link rel="stylesheet" href="/style/components.css" />
+  <link rel="stylesheet" href="/style/portfolio.css" />
+  <link rel="stylesheet" href="/style/projects.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <!-- Logo -->
+      <div class="navbar-brand" onclick="toggleMobileMenu()">
+        <img src="/assets/face.webp" alt="achu" class="navbar-logo" />
+        <span class="navbar-title">Dev</span>
+        <svg class="navbar-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+
+      <!-- Desktop Links -->
+      <div class="navbar-links">
+        <a href="https://www.arjc.me" target="_blank" class="navbar-link">Website</a>
+        <a href="https://linkedin.com/in/arjc" target="_blank" class="navbar-link">LinkedIn</a>
+        <a href="https://github.com/arjc" target="_blank" class="navbar-link">GitHub</a>
+        <a href="mailto:arjcwo@gmail.com" class="navbar-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="navbar-dropdown" id="mobileMenu">
+      <span class="navbar-dropdown-link" onclick="togglePortfolio()">Portfolio</span>
+      <a href="https://www.arjc.me" target="_blank" class="navbar-dropdown-link">Visit Website</a>
+      <a href="https://linkedin.com/in/arjc" target="_blank" class="navbar-dropdown-link">LinkedIn</a>
+      <a href="https://github.com/arjc" target="_blank" class="navbar-dropdown-link">GitHub</a>
+      <a href="mailto:arjcwo@gmail.com" class="navbar-dropdown-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <!-- Portfolio Sidebar -->
+    <div class="portfolio">
+      <div class="scroll-indicator">
+        scroll ~~&gt;
+      </div>
+
+      <!-- Hero -->
+      <div class="portfolio-hero">
+        <span class="reveal hero-name" style="--delay: 200ms">
+          Arjun M L
+        </span>
+        <span class="reveal hero-tag" style="--delay: 300ms">FULL STACK</span>
+        <span class="reveal hero-tag" style="--delay: 300ms">&lt;DEV&gt;</span>
+        <span class="reveal hero-tag" style="--delay: 400ms">PORTFOLIO</span>
+      </div>
+
+      <!-- Status Badge -->
+      <div class="reveal status-badge" style="--delay: 450ms">
+        <span class="status-dot"></span>
+        <span>Learning @ Collage, NSSCE Palakkad</span>
+      </div>
+
+      <!-- Profile Section -->
+      <h1 class="reveal" style="--delay: 500ms">About me ~~></h1>
+      <div class="reveal profile-card" style="--delay: 550ms">
+        <h1 class="profile-name">
+          Arjun M L
+          <span class="profile-age">(19)</span>
+          <span class="profile-location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 
                     7.5H.5a.5.5 0 0 0 0 1h.518A7 7 0 0 0 7.5 
                     14.982v.518a.5.5 0 0 0 1 0v-.518A7 7 0 0 0 
                     14.982 8.5h.518a.5.5 0 0 0 0-1h-.518A7 7 0 0 0 8.5 
@@ -92,179 +90,297 @@
                     0v-.48a6 6 0 0 1 5.48 5.48h-.48a.5.5 0 0 0 0 
                     1h.48a6 6 0 0 1-5.48 5.48v-.48a.5.5 0 0 0-1 
                     0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 
-                    0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
-                ></path>
-              </svg>
-              Kochi, Kerala
-            </span>
-          </h1>
-          <img
-            class="min-h-10 max-w-[10em]"
-            src="/assets/rayban.jpg"
-            alt="profile pic of achukuttan aka Arjun M Liji"
-          />
-        </div>
+                    0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
+            </svg>
+            Kochi, Kerala
+          </span>
+        </h1>
+        <img class="profile-img" src="/assets/rayban.jpg" alt="profile pic of achukuttan aka Arjun M Liji" />
+      </div>
+      
+      <!-- Download CV -->
+      <a href="#" onclick="alert('No data please check again'); return false;" class="reveal download-cv-btn"
+        style="--delay: 620ms; margin: 5px 0 20px 0;">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3" />
+        </svg>
+        Download CV
+      </a>
 
-        <!-- desc -->
-        <p class="text-gray-300 p-2 text-sml">
-          >I am an 18 year old Computer Science Engineering student from Kerala,
-          India. <br />
-          <br />
-          >I'm specialized in React.js and am learning about backend development
-          with Node.js and Express.js. <br />
+      <!-- Bio Section -->
+      <div class="reveal bio-section" style="--delay: 600ms">
+        <p>
+          <span class="bio-number">01.</span> Computer Science undergraduate and self-taught budding full stack
+          developer specializing in <span class="text-blue-400">React.js</span>, <span
+            class="text-green-400">Node.js</span>, and <span class="text-green-500">MongoDB</span>.
         </p>
-
-        <br />
-        <br />
-        <br />
-        <!-- work experience -->
-        <h1>Experience ~~></h1>
-        <div>
-          <div>
-            <h2></h2>
-          </div>
-        </div>
-        <br /><br /><br />
-        <!-- skill -->
-        <h1>My Skills ~~></h1>
-        <div>
-          <ul class="skill-list">
-            <b>Languages:</b>
-            <li>
-              <span class="bigger text-blue-400">Ts/Javascript</span>
-              <span class="bigger text-orange-500">HTML5</span>
-              <span class="bigger text-blue-300">CSS3</span>
-              <span class="bigger text-yellow-500">Python</span>
-              <span class="bigger text-gray-100">C</span>
-            </li>
-            <b>Frontend:</b>
-            <li>
-              <span class="bigger text-blue-300">React</span>
-              <span class="bigger text-cyan-400">Tailwind</span>
-              <span class="bigger text-blue-700">Flutter</span>
-              <span class="bigger text-purple-300">Bootstrap</span>
-            </li>
-            <b>Backend:</b>
-            <li>
-              <span class="bigger text-blue-400">MySQL</span>
-              <span class="bigger text-green-500">MongoDB</span>
-              <span class="bigger text-gray-100">Expressjs</span>
-            </li>
-            <b>Tools & Platforms:</b>
-            <li>
-              <span class="bigger text-red-400">Git</span>
-              <span class="bigger text-cyan-500">Docker</span>
-              <span class="bigger text-pink-400">Figma</span>
-            </li>
-          </ul>
-        </div>
+        <p>
+          <span class="bio-number">02.</span> Building scalable web applications and applying modern software
+          engineering practices.
+        </p>
+        <p>
+          <span class="bio-number">03.</span> Actively developing real-world projects and exploring AI-powered
+          technologies.
+        </p>
       </div>
 
-      <div
-        class="theOtherShi flex flex-col overflow-y-scroll h-screen sbar-hide xl:w-[75vw] l-0 w-screen gap-20 pb-20 bg-[#0006]"
-      >
-      <br><br><br><br>
-        <!-- Jibesh balan was my mathematics teacher. He hated me-->
-        <div
-          class="flex flex-col items-center justify-evenly"
-        >
-          <div
-            class="project-grid grid grid-cols-1 md:grid-cols-2 justify-evenly items-start gap-5 md:gap-10"
-          >
-            <div class="flex flex-col">
-              <h1>ALL</h1>
-              <h1>PROJECTS ~~></h1>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Games</h1>
-              <a href="/match3"> 🍫 Custom Match 3 -></a>
-              <a href="/memory">🧠 Custom Memory -></a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Tutorials</h1>
-              <a href="https://nosebyte.github.io/solar/solar.html">
-                🐲 Python Ascii Animation ->
-              </a>
-              <a href="https://www.youtube.com/watch?v=k3nDLy6UTuk">
-                ⬇ Js Scroll Animation ->
-              </a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>IOT</h1>
-              <a href="https://nosebyte.github.io/solar/solar.html">
-                🔊 Arduino Buzzer songs ->
-              </a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>3D Projects</h1>
-              <a href="https://nosebyte.github.io/solar/solar.html">
-                🌌 Space orrery ->
-              </a>
-              <a href="/cube"> ⬢ ThreeD shapes -></a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Prototype / Designs</h1>
-              <a href="https://figma.com/arjc">🏫 School App prototype -></a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Archive</h1>
-              <a href="/counter">🔢 3D Counter -></a>
-              <a href="/calculator">🧮 Malayalam Calculator -></a>
-            </div>
-          </div>
-        </div>
-        <!-- Jibesh balan was my mathematics teacher. He hated me-->
-        <div
-          class="flex flex-col items-center justify-evenly"
-        >
-          <div
-            class="project-grid grid grid-cols-1 md:grid-cols-2 justify-evenly items-start gap-5 md:gap-10"
-          >
-            <div class="flex flex-col">
-              <h1>ALL</h1>
-              <h1>PROJECTS ~~></h1>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Games</h1>
-              <a href="/match3"> 🍫 Custom Match 3 -></a>
-              <a href="/memory">🧠 Custom Memory -></a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Tutorials</h1>
-              <a href="https://nosebyte.github.io/solar/solar.html">
-                🐲 Python Ascii Animation ->
-              </a>
-              <a href="https://www.youtube.com/watch?v=k3nDLy6UTuk">
-                ⬇ Js Scroll Animation ->
-              </a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>IOT</h1>
-              <a href="https://nosebyte.github.io/solar/solar.html">
-                🔊 Arduino Buzzer songs ->
-              </a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>3D Projects</h1>
-              <a href="https://nosebyte.github.io/solar/solar.html">
-                🌌 Space orrery ->
-              </a>
-              <a href="/cube"> ⬢ ThreeD shapes -></a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Prototype / Designs</h1>
-              <a href="https://figma.com/arjc">🏫 School App prototype -></a>
-            </div>
-            <div class="flex flex-col items-left justify-evenly">
-              <h1>Archive</h1>
-              <a href="/counter">🔢 3D Counter -></a>
-              <a href="/calculator">🧮 Malayalam Calculator -></a>
-            </div>
-          </div>
-        </div>
+
+      <!-- Education -->
+      <h1 class="reveal" style="--delay: 700ms">Education ~~></h1>
+      <div class="reveal timeline-item" style="--delay: 750ms">
+        <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+        <p class="timeline-subtitle">NSS College of Engineering, Palakkad</p>
+        <p style="font-size: 0.7em; opacity: 50%;">Aug 2025 – Present</p>
+      </div>
+
+      <!-- Experience -->
+      <h1 class="reveal section-title" style="--delay: 800ms">Experience ~~></h1>
+      <div class="reveal timeline-item" style="--delay: 900ms">
+        <h3 class="timeline-title">NEOs Space Orrery – NASA API</h3>
+        <p class="timeline-subtitle">NASA Space Apps 2024</p>
+        <p style="font-size: 0.7em; opacity: 50%;">November 2024</p>
+        <ul style="font-size: 0.75rem; color: #9ca3af; padding-left: 1rem; margin-top: 0.25rem; list-style: disc;">
+          <li>Built an interactive orrery simulation visualizing Near Earth Objects (NEOs)</li>
+          <li>Implemented 3D rendering using WebGL (Three.js)</li>
+          <li>Designed responsive UI ensuring responsivity across devices</li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <h1 class="reveal section-title" style="--delay: 950ms">Tech Stack ~~></h1>
+      <div class="reveal skills-section" style="--delay: 1000ms">
+        <ul class="skill-list">
+          <b class="skill-category">// Languages</b>
+          <li>
+            <span class="bigger text-yellow-400">JavaScript</span>
+            <span class="bigger text-blue-400">TypeScript</span>
+            <span class="bigger">C</span>
+            <span class="bigger text-yellow-500">Python</span>
+            <span class="bigger text-blue-300">SQL</span>
+          </li>
+          <b class="skill-category">// Frontend</b>
+          <li>
+            <span class="bigger text-cyan-400">React.js</span>
+            <span class="bigger text-cyan-500">Tailwind CSS</span>
+            <span class="bigger text-orange-400">HTML5</span>
+            <span class="bigger text-blue-400">CSS3</span>
+            <span class="bigger text-green-400">Three.js</span>
+          </li>
+          <b class="skill-category">// Backend & Database</b>
+          <li>
+            <span class="bigger text-green-400">Node.js</span>
+            <span class="bigger text-green-500">MongoDB</span>
+            <span class="bigger text-blue-400">MySQL</span>
+          </li>
+          <b class="skill-category">// Tools & DevOps</b>
+          <li>
+            <span class="bigger text-orange-400">Git</span>
+            <span class="bigger text-gray-100">GitHub</span>
+            <span class="bigger text-gray-300">Bash</span>
+            <span class="bigger text-purple-300">Vercel</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Interests -->
+      <h1 class="reveal section-title" style="--delay: 1050ms">Interests ~~></h1>
+      <div class="reveal interests-list" style="--delay: 1100ms">
+        <span class="interest-tag">3D Graphics</span>
+        <span class="interest-tag">AI & ML</span>
+        <span class="interest-tag">Game Dev</span>
+        <span class="interest-tag">IoT</span>
+        <span class="interest-tag">UI/UX Design</span>
+        <span class="interest-tag">Problem Solving</span>
+      </div>
+
+      <!-- Contact / Social -->
+      <h1 class="reveal section-title" style="--delay: 1150ms">Connect ~~></h1>
+      <div class="reveal social-section" style="--delay: 1200ms">
+        <a href="https://github.com/arjc" target="_blank" class="social-link">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+          <span class="social-name">GitHub</span>
+          <span class="social-handle">@arjc</span>
+        </a>
+        <a href="https://linkedin.com/in/arjc" target="_blank" class="social-link">
+          <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span class="social-name">LinkedIn</span>
+          <span class="social-handle">in/arjc</span>
+        </a>
+        <a href="mailto:arjcwo@gmail.com" class="social-link">
+          <svg class="social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="social-name">Email</span>
+          <span class="social-handle">arjcwo@gmail.com</span>
+        </a>
+        <a href="https://www.arjc.me" target="_blank" class="social-link">
+          <svg class="social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+          </svg>
+          <span class="social-name">Website</span>
+          <span class="social-handle">arjc.me</span>
+        </a>
       </div>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Projects Section -->
+    <div class="projects-section">
+      <!-- Spacer for nav -->
+      <div class="nav-spacer"></div>
+
+      <!-- Featured Section Header -->
+      <div class="reveal section-header" style="--delay: 100ms">
+        <span class="section-label">// Featured Work</span>
+        <h1>My Projects</h1>
+        <p class="section-description">See my 4 years worth of journey builing websites, simulations, games and other things 
+          which I've been curious enough to come across and make a project on...</p>
+      </div>
+
+      <!-- Featured Projects Grid -->
+      <div class="reveal featured-grid" style="--delay: 200ms">
+        <!-- Featured Project-->
+        <div class="featured-card">
+          <img src="thumb/linecut.png" alt="linecut project illustration" class="card-img">
+          <div class="card-info">
+            <h3 class="card-title">Linecut - custom Match 3 game</h3>
+            <p class="card-description">Line cut has Moggerlal, Rajumon and even Niggesh Gopi. Candy crush clone-like
+              game
+              made using javascript</p>
+            <div class="card-footer">
+              <span class="card-year">2025</span>
+              <a href="https://github.com/arjc/linecut" class="card-link">github repo ~~></a>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Project -->
+        <div class="featured-card">
+          <img src="thumb/arduino.jpg" alt="arduino buzzer music project illustration" class="card-img">
+          <div class="card-info">
+            <h3 class="card-title">Arduino buzzer music</h3>
+            <p class="card-description">Program a custom song to your arduino and play it using a peizoelectric buzzer.
+            </p>
+            <div class="card-footer">
+              <span class="card-year">2023</span>
+              <a href="https://github.com/arjc/arduino-music" class="card-link">github repo ~~></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Projects Section -->
+      <div class="reveal archive-header" style="--delay: 300ms">
+        <span class="section-label">// All Work</span>
+        <h2>Project Archive ~~&gt;</h2>
+      </div>
+
+      <div class="reveal project-grid" style="--delay: 400ms">
+        <!-- Games Category -->
+        <div class="project-category">
+          <div class="category-header">
+            <span class="category-icon">(2)</span>
+            <h3 class="category-title">Games</h3>
+          </div>
+          <a href="/match3" class="project-link">
+            <span class="project-name">Match 3 Engine</span>
+            <span class="project-type">Puzzle game</span>
+          </a>
+          <a href="/memory" class="project-link">
+            <span class="project-name">Memory Game</span>
+            <span class="project-type">Card matching</span>
+          </a>
+        </div>
+
+        <!-- 3D Projects -->
+        <div class="project-category">
+          <div class="category-header">
+            <span class="category-icon">(0)</span>
+            <h3 class="category-title">3D & Graphics</h3>
+          </div>
+          <a href="https://nosebyte.github.io/solar/solar.html" class="project-link">
+            <span class="project-name">Space Orrery</span>
+            <span class="project-type">NASA API, NEOs and Solar system orrery</span>
+          </a>
+          <a href="/cube" class="project-link">
+            <span class="project-name">3D Shapes</span>
+            <span class="project-type">Three.js demo</span>
+          </a>
+          <a href="/counter" class="project-link">
+            <span class="project-name">3D Counter</span>
+            <span class="project-type">Animated numbers</span>
+          </a>
+        </div>
+
+        <!-- Tutorials -->
+        <div class="project-category">
+          <div class="category-header">
+            <span class="category-icon">(0)</span>
+            <h3 class="category-title">Tutorials</h3>
+          </div>
+          <a href="https://nosebyte.github.io/solar/solar.html" class="project-link">
+            <span class="project-name">ASCII Animation</span>
+            <span class="project-type">Python tutorial</span>
+          </a>
+          <a href="https://www.youtube.com/watch?v=k3nDLy6UTuk" class="project-link">
+            <span class="project-name">Scroll Animation</span>
+            <span class="project-type">JavaScript guide</span>
+          </a>
+        </div>
+
+        <!-- IoT -->
+        <div class="project-category">
+          <div class="category-header">
+            <span class="category-icon">(0)</span>
+            <h3 class="category-title">IoT & Hardware</h3>
+          </div>
+          <a href="https://nosebyte.github.io/solar/solar.html" class="project-link">
+            <span class="project-name">Buzzer Songs</span>
+            <span class="project-type">Arduino project</span>
+          </a>
+        </div>
+
+        <!-- Design -->
+        <div class="project-category">
+          <div class="category-header">
+            <span class="category-icon">(0)</span>
+            <h3 class="category-title">Design & Prototypes</h3>
+          </div>
+          <a href="https://figma.com/arjc" class="project-link">
+            <span class="project-name">School App</span>
+            <span class="project-type">UI/UX prototype</span>
+          </a>
+        </div>
+
+        <!-- Tools -->
+        <div class="project-category">
+          <div class="category-header">
+            <span class="category-icon">(0)</span>
+            <h3 class="category-title">Tools & Utilities</h3>
+          </div>
+          <a href="/calculator" class="project-link">
+            <span class="project-name">Malayalam Calculator</span>
+            <span class="project-type">Regional language</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <h1 style="color: white; font-family: monospace;">arjc.me</h1>
+        <p class="copyright">© 2023-2026 Arjun M Liji</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
