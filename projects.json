@@ -1,0 +1,299 @@
+{
+  "format": "arjctab",
+  "version": 1,
+  "table": {
+    "slug": "projects"
+  },
+  "columns": [
+    {
+      "key": "short",
+      "name": "short",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "name",
+      "name": "name",
+      "type": "text",
+      "required": false
+    },
+    {
+      "key": "desc",
+      "name": "desc",
+      "type": "longtext",
+      "required": false
+    },
+    {
+      "key": "date",
+      "name": "date",
+      "type": "date",
+      "required": false
+    },
+    {
+      "key": "img",
+      "name": "img",
+      "type": "url",
+      "required": false
+    },
+    {
+      "key": "repo",
+      "name": "repo",
+      "type": "url",
+      "required": false
+    },
+    {
+      "key": "live",
+      "name": "live",
+      "type": "url",
+      "required": false
+    },
+    {
+      "key": "cat",
+      "name": "cat",
+      "type": "number",
+      "required": false
+    },
+    {
+      "key": "short_desc",
+      "name": "short_desc",
+      "type": "text",
+      "required": false
+    },
+    {
+      "key": "high",
+      "name": "high",
+      "type": "boolean",
+      "required": false
+    }
+  ],
+  "records": [
+    {
+      "short": "ARDUINO-MUSIC",
+      "name": "Arduino buzzer music",
+      "desc": "Program a custom song to your Arduino and play it using a piezoelectric buzzer.",
+      "date": "2023-01-01",
+      "img": "https://arjc.github.io/thumb/arduino.jpg",
+      "repo": "https://www.github.com/arjc/arduino-music",
+      "live": null,
+      "cat": 0,
+      "short_desc": "Arduino piezoelectric music",
+      "high": true
+    },
+    {
+      "short": "NEOS-ORRERY",
+      "name": "NEOs Space orrery",
+      "desc": "NASA API, Near Earth Objects simulation.",
+      "date": "2023-01-01",
+      "img": "https://arjc.github.io/thumb/nose.png",
+      "repo": "https://www.github.com/nosebyte/nosebyte.github.io",
+      "live": null,
+      "cat": 1,
+      "short_desc": "Space simulation with NASA API",
+      "high": true
+    },
+    {
+      "short": "ARCHJUN",
+      "name": "ArchJun Distro",
+      "desc": "ArchJun - The ArjunOS is an Arch Linux based distro built for ricers.",
+      "date": "2025-01-01",
+      "img": "https://arjc.github.io/thumb/archjun.png",
+      "repo": "https://www.github.com/arjc/linecut",
+      "live": null,
+      "cat": 3,
+      "short_desc": "Arch Linux based distro",
+      "high": true
+    },
+    {
+      "short": "PAVANAI",
+      "name": "Pavanai Multiboot",
+      "desc": "Mr PV Narayanan AKA Pavanai helps you store all of your IT ISOs in one pendrive.",
+      "date": "2025-01-01",
+      "img": "https://arjc.github.io/thumb/pavanai.png",
+      "repo": "https://www.github.com/arjc/pavanai",
+      "live": null,
+      "cat": 3,
+      "short_desc": "Ventoy bootloader theme",
+      "high": true
+    },
+    {
+      "short": "LINECUT",
+      "name": "Linecut - custom Match 3 game",
+      "desc": "A Candy Crush clone-like game featuring Moggerlal, Rajumon and Niggesh Gopi, made using JavaScript.",
+      "date": "2025-01-01",
+      "img": "https://arjc.github.io/thumb/linecut.png",
+      "repo": "https://www.github.com/arjc/linecut",
+      "live": "https://arjc.github.io/linecut",
+      "cat": 1,
+      "short_desc": "Custom Match 3 game",
+      "high": true
+    },
+    {
+      "short": "INTERACTIVE-ORRERY",
+      "name": "Interactive Orrery",
+      "desc": "Interactive space simulation built with Three.js.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Interactive+Orrery",
+      "repo": "https://www.github.com/arjc/interactive-orrery",
+      "live": null,
+      "cat": 1,
+      "short_desc": "Space simulation, Three.js",
+      "high": false
+    },
+    {
+      "short": "3D-WEBSITE",
+      "name": "3D Personal Website",
+      "desc": "Personal website built with React, Three.js and Vite.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=3D+Personal+Website",
+      "repo": "https://www.github.com/arjc/arjun-3d-website",
+      "live": null,
+      "cat": 1,
+      "short_desc": "React, Three.js, Vite",
+      "high": false
+    },
+    {
+      "short": "AQUARIUM-PHYSICS",
+      "name": "Aquarium Physics",
+      "desc": "Underwater physics simulation built with Matter.js.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Aquarium+Physics",
+      "repo": "https://www.github.com/arjc/aquarium-physics",
+      "live": null,
+      "cat": 1,
+      "short_desc": "Underwater simulation, Matter.js",
+      "high": false
+    },
+    {
+      "short": "3D-COUNTER",
+      "name": "3D Counter",
+      "desc": "Multidimensional counting project.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=3D+Counter",
+      "repo": "https://www.github.com/arjc/3d-counter",
+      "live": null,
+      "cat": 1,
+      "short_desc": "Multidimensional counting",
+      "high": false
+    },
+    {
+      "short": "ACHU-BIRDS",
+      "name": "Achu Birds",
+      "desc": "Angry Birds clone built with Matter.js.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Achu+Birds",
+      "repo": "https://www.github.com/arjc/achu-birds",
+      "live": null,
+      "cat": 1,
+      "short_desc": "Angry Birds clone, Matter.js",
+      "high": false
+    },
+    {
+      "short": "MEMORY",
+      "name": "Memory Game",
+      "desc": "Card matching game.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Memory+Game",
+      "repo": null,
+      "live": "https://arjc.me/memory",
+      "cat": 1,
+      "short_desc": "Card matching",
+      "high": false
+    },
+    {
+      "short": "KUNJAN",
+      "name": "Kunjan AI [WIP]",
+      "desc": "A thullal hasyakala inspired AI.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Kunjan+AI",
+      "repo": "https://www.github.com/arjc/kunjan",
+      "live": null,
+      "cat": 2,
+      "short_desc": "Thullal hasyakala inspired AI",
+      "high": false
+    },
+    {
+      "short": "ARDUINO-FASTFLASH",
+      "name": "Fast Flash",
+      "desc": "Inefficient Arduino LED chaser.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Fast+Flash",
+      "repo": "https://www.github.com/arjc/arduino-fastflash",
+      "live": null,
+      "cat": 0,
+      "short_desc": "Arduino LED chaser",
+      "high": false
+    },
+    {
+      "short": "SCHOOL-APP",
+      "name": "School App",
+      "desc": "UI/UX prototype.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=School+App",
+      "repo": null,
+      "live": "https://www.figma.com/arjc",
+      "cat": 5,
+      "short_desc": "UI/UX prototype",
+      "high": false
+    },
+    {
+      "short": "ASCII-ANIMATION",
+      "name": "ASCII Animation",
+      "desc": "Python tutorial.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=ASCII+Animation",
+      "repo": null,
+      "live": "https://nosebyte.github.io/solar/solar.html",
+      "cat": 5,
+      "short_desc": "Python tutorial",
+      "high": false
+    },
+    {
+      "short": "PERSONAL-WEBSITE",
+      "name": "Personal Website",
+      "desc": "Personal website built with React, Node.js and Firebase.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Personal+Website",
+      "repo": "https://www.github.com/arjc/arjun-website",
+      "live": null,
+      "cat": 5,
+      "short_desc": "React, Node.js, Firebase",
+      "high": false
+    },
+    {
+      "short": "ACHUFETCH",
+      "name": "Achufetch",
+      "desc": "Neofetch-inspired bash script.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Achufetch",
+      "repo": "https://www.github.com/arjc/achufetch",
+      "live": null,
+      "cat": 3,
+      "short_desc": "Neofetch-inspired bash script",
+      "high": false
+    },
+    {
+      "short": "ARC-COMPRESS",
+      "name": "Arc Compress",
+      "desc": "90% ratio compression method.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Arc+Compress",
+      "repo": "https://www.github.com/arjc/arc-compress",
+      "live": null,
+      "cat": 3,
+      "short_desc": "90% ratio compression method",
+      "high": false
+    },
+    {
+      "short": "MALAYALAM-CALCULATOR",
+      "name": "Malayalam Calculator",
+      "desc": "Calculator using Malayalam lipi characters and symbols.",
+      "date": null,
+      "img": "https://placehold.co/600x400/1f2937/ffffff?text=Malayalam+Calculator",
+      "repo": null,
+      "live": "https://arjc.me/calculator",
+      "cat": 5,
+      "short_desc": "Malayalam lipi calculator",
+      "high": false
+    }
+  ]
+}

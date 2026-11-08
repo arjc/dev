@@ -332,6 +332,24 @@
     background-color: rgba(255, 255, 255, 0.02);
 }
 
+.timeline-date {
+    font-size: 0.7em;
+    opacity: 0.5;
+}
+
+.timeline-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #6b7280;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.timeline-link:hover {
+    color: #60a5fa;
+}
+
 /* ===== BADGE/TAG STYLES ===== */
 
 .badge {

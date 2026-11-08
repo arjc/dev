@@ -11,11 +11,11 @@
     href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manjari:wght@100;400;700&display=swap"
     rel="stylesheet" />
   <link rel="icon" type="image/png" href="/assets/face.webp" />
-  <link rel="stylesheet" href="/style/base.css" />
-  <link rel="stylesheet" href="/style/layout.css" />
-  <link rel="stylesheet" href="/style/components.css" />
-  <link rel="stylesheet" href="/style/portfolio.css" />
-  <link rel="stylesheet" href="/style/projects.css" />
+  <link rel="stylesheet" href="style/base.css" />
+  <link rel="stylesheet" href="style/layout.css" />
+  <link rel="stylesheet" href="style/components.css" />
+  <link rel="stylesheet" href="style/portfolio.css" />
+  <link rel="stylesheet" href="style/projects.css" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <div class="navbar-inner">
       <!-- Logo -->
       <div class="navbar-brand" onclick="toggleMobileMenu()">
-        <img src="/assets/face.webp" alt="achu" class="navbar-logo" />
+        <img src="assets/face.webp" alt="achu" class="navbar-logo" />
         <span class="navbar-title">Dev</span>
         <svg class="navbar-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -60,7 +60,7 @@
 
       <!-- Hero -->
       <div class="portfolio-hero">
-        <span class="reveal hero-name" style="--delay: 200ms">
+        <span class="reveal hero-name" id="profileNameHero" style="--delay: 200ms">
           Arjun M L
         </span>
         <span class="reveal hero-tag" style="--delay: 300ms">FULL STACK</span>
@@ -71,14 +71,14 @@
       <!-- Status Badge -->
       <div class="reveal status-badge" style="--delay: 450ms">
         <span class="status-dot"></span>
-        <span>Currently learning @ University - NSSCE Palakkad</span>
+        <span id="profileStatus">Currently learning @ University - NSSCE Palakkad</span>
       </div>
 
       <!-- Profile Section -->
       <h1 class="reveal" style="--delay: 500ms">About me ~~></h1>
       <div class="reveal profile-card" style="--delay: 550ms">
         <h1 class="profile-name">
-          Arjun M L
+          <span id="profileName">Arjun M L</span>
           <span class="profile-age">(19)</span>
           <span class="profile-location">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -92,10 +92,10 @@
                     0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 
                     0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
             </svg>
-            Kochi, Kerala
+            <span id="profilePlace">Kochi, Kerala</span>
           </span>
         </h1>
-        <img class="profile-img" src="/assets/rayban.jpg" alt="profile pic of achukuttan aka Arjun M Liji" />
+          <img class="profile-img" src="assets/rayban.jpg" alt="profile pic of achukuttan aka Arjun M Liji" />
       </div>
 
       <!-- Download CV -->
@@ -109,45 +109,21 @@
       </a>
 
       <!-- Bio Section -->
-      <div class="reveal bio-section" style="--delay: 600ms">
-        <p>
-          <span class="bio-number">01.</span> Computer Science undergraduate and self-taught budding full stack
-          developer specializing in <span class="text-blue-400">React.js</span>, <span
-            class="text-green-400">Node.js</span>, and <span class="text-green-500">MongoDB</span>.
-        </p>
-        <p>
-          <span class="bio-number">02.</span> Building scalable web applications and applying modern software
-          engineering practices.
-        </p>
-        <p>
-          <span class="bio-number">03.</span> Actively developing real-world projects and exploring AI-powered
-          technologies.
-        </p>
+      <div class="reveal bio-section" id="profileBrief" style="--delay: 600ms">
       </div>
 
       <br><br><br>
 
       <!-- Education -->
       <h1 class="reveal" style="--delay: 700ms">Education ~~></h1>
-      <div class="reveal timeline-item" style="--delay: 750ms">
-        <h3 class="timeline-title">B.Tech in Computer Science & Engineering ~~&gt;</h3>
-        <p class="timeline-subtitle">NSS College of Engineering, Palakkad</p>
-        <p style="font-size: 0.7em; opacity: 50%;">Aug 2025 – Present</p>
+      <div class="reveal" id="educationEntries" style="--delay: 750ms">
       </div>
 
       <br><br><br>
 
       <!-- Experience -->
       <h1 class="reveal section-title" style="--delay: 800ms">Experience ~~></h1>
-      <div class="reveal timeline-item" style="--delay: 900ms">
-        <h3 class="timeline-title">NEOs Space Orrery – NASA API ~~&gt;</h3>
-        <p class="timeline-subtitle">NASA Space Apps 2024</p>
-        <p style="font-size: 0.7em; opacity: 50%;">November 2024</p>
-        <ul style="font-size: 0.75rem; color: #9ca3af; padding-left: 1rem; margin-top: 0.25rem; list-style: disc;">
-          <li>Built an interactive orrery simulation visualizing Near Earth Objects (NEOs)</li>
-          <li>Implemented 3D rendering using WebGL (Three.js)</li>
-          <li>Designed responsive UI ensuring responsivity across devices</li>
-        </ul>
+      <div class="reveal" id="experienceEntries" style="--delay: 900ms">
       </div>
 
       <br><br><br>
@@ -155,51 +131,14 @@
       <!-- Skills -->
       <h1 class="reveal section-title" style="--delay: 950ms">Tech Stack ~~></h1>
       <div class="reveal skills-section" style="--delay: 1000ms">
-        <ul class="skill-list">
-          <b class="skill-category">// Languages</b>
-          <li>
-            <span class="bigger text-yellow-400">JavaScript</span>
-            <span class="bigger text-blue-400">TypeScript</span>
-            <span class="bigger">C</span>
-            <span class="bigger text-yellow-500">Python</span>
-            <span class="bigger text-blue-300">SQL</span>
-          </li>
-          <b class="skill-category">// Frontend</b>
-          <li>
-            <span class="bigger text-cyan-400">React.js</span>
-            <span class="bigger text-cyan-500">Tailwind CSS</span>
-            <span class="bigger text-orange-400">HTML5</span>
-            <span class="bigger text-blue-400">CSS3</span>
-            <span class="bigger text-green-400">Three.js</span>
-          </li>
-          <b class="skill-category">// Backend & Database</b>
-          <li>
-            <span class="bigger text-green-400">Node.js</span>
-            <span class="bigger text-green-500">MongoDB</span>
-            <span class="bigger text-blue-400">MySQL</span>
-          </li>
-          <b class="skill-category">// Tools & DevOps</b>
-          <li>
-            <span class="bigger text-orange-400">Git</span>
-            <span class="bigger text-gray-100">GitHub</span>
-            <span class="bigger text-gray-300">Bash</span>
-            <span class="bigger text-purple-300">Vercel</span>
-          </li>
-        </ul>
+        <ul class="skill-list" id="techStackList"></ul>
       </div>
 
       <br><br><br>
 
       <!-- Interests -->
       <h1 class="reveal section-title" style="--delay: 1050ms">Interests ~~></h1>
-      <div class="reveal interests-list" style="--delay: 1100ms">
-        <span class="interest-tag">3D Graphics</span>
-        <span class="interest-tag">AI & ML</span>
-        <span class="interest-tag">Game Dev</span>
-        <span class="interest-tag">IoT</span>
-        <span class="interest-tag">UI/UX Design</span>
-        <span class="interest-tag">Problem Solving</span>
-      </div>
+      <div class="reveal interests-list" id="interestsList" style="--delay: 1100ms"></div>
 
       <br><br><br>
 
@@ -255,72 +194,7 @@
       </div>
 
       <!-- Featured Projects Grid -->
-      <div class="reveal featured-grid" style="--delay: 200ms">
-        <!-- Featured Project -->
-        <div class="featured-card">
-          <img src="thumb/arduino.jpg" alt="arduino buzzer music project illustration" class="card-img">
-          <div class="card-info">
-            <h3 class="card-title">Arduino buzzer music ~~&gt;</h3>
-            <p class="card-description">Program a custom song to your arduino and play it using a peizoelectric buzzer.
-            </p>
-            <div class="card-footer">
-              <span class="card-year">2023</span>
-              <a href="https://github.com/arjc/arduino-music" class="card-link">github repo ~~></a>
-            </div>
-          </div>
-        </div>
-        <!-- Featured Project -->
-        <div class="featured-card">
-          <img src="thumb/nose.png" alt="arduino buzzer music project illustration" class="card-img">
-          <div class="card-info">
-            <h3 class="card-title">NEOs Space orrery ~~&gt;</h3>
-            <p class="card-description">Nasa API, Near Earth Objects simulation.
-            </p>
-            <div class="card-footer">
-              <span class="card-year">2023</span>
-              <a href="https://github.com/nosebyte/nosebyte.github.io" class="card-link">github repo ~~></a>
-            </div>
-          </div>
-        </div>
-        <!-- Featured Project-->
-        <div class="featured-card">
-          <img src="thumb/archjun.png" alt="linecut project illustration" class="card-img">
-          <div class="card-info">
-            <h3 class="card-title">ArchJun Distro ~~&gt;</h3>
-            <p class="card-description">ArchJun - The ArjunOS is an Arch Linux based distro built for ricers</p>
-            <div class="card-footer">
-              <span class="card-year">2025</span>
-              <a href="https://github.com/arjc/linecut" class="card-link">github repo ~~></a>
-            </div>
-          </div>
-        </div>
-        <!-- Featured Project-->
-        <div class="featured-card">
-          <img src="thumb/pavanai.png" alt="linecut project illustration" class="card-img">
-          <div class="card-info">
-            <h3 class="card-title">Pavanai Multiboot ~~&gt;</h3>
-            <p class="card-description">Mr PV Narayanan AKA Pavanai will help you store all of your IT ISOs in one
-              pendrive</p>
-            <div class="card-footer">
-              <span class="card-year">2025</span>
-              <a href="https://github.com/arjc/pavanai" class="card-link">github repo ~~></a>
-            </div>
-          </div>
-        </div>
-        <!-- Featured Project-->
-        <div class="featured-card">
-          <img src="thumb/linecut.png" alt="linecut project illustration" class="card-img">
-          <div class="card-info">
-            <h3 class="card-title">Linecut - custom Match 3 game ~~&gt;</h3>
-            <p class="card-description">Line cut has Moggerlal, Rajumon and even Niggesh Gopi. Candy crush clone-like
-              game
-              made using javascript</p>
-            <div class="card-footer">
-              <span class="card-year">2025</span>
-              <a href="https://github.com/arjc/linecut" class="card-link">github repo ~~></a>
-            </div>
-          </div>
-        </div>
+      <div class="reveal featured-grid" id="featuredProjects" style="--delay: 200ms">
       </div>
 
       <!-- All Projects Section -->
@@ -329,122 +203,7 @@
         <h2>Project Archive ~~&gt;</h2>
       </div>
 
-      <div class="reveal project-grid" style="--delay: 400ms">
-
-        <!-- 3D & Graphics -->
-        <div class="project-category">
-          <div class="category-header">
-            <span class="category-icon">(4)</span>
-            <h3 class="category-title">3D, Graphics & Simulation ~~&gt;</h3>
-          </div>
-          <a href="https://github.com/arjc/interactive-orrery" class="project-link">
-            <span class="project-name">Interactive Orrery</span>
-            <span class="project-type">Space simulation, Three.js</span>
-          </a>
-          <a href="https://github.com/arjc/arjun-3d-website" class="project-link">
-            <span class="project-name">3D Personal Website</span>
-            <span class="project-type">React, Three.js, Vite</span>
-          </a>
-          <a href="https://github.com/arjc/aquarium-physics" class="project-link">
-            <span class="project-name">Aquarium Physics</span>
-            <span class="project-type">Underwater simulation, Matter.js</span>
-          </a>
-          <a href="https://github.com/arjc/3d-counter" class="project-link">
-            <span class="project-name">3D Counter</span>
-            <span class="project-type">Multidimensional counting</span>
-          </a>
-        </div>
-        <!-- Games Category -->
-        <div class="project-category">
-          <div class="category-header">
-            <span class="category-icon">(3)</span>
-            <h3 class="category-title">Games ~~&gt;</h3>
-          </div>
-          <a href="https://arjc.github.io/linecut" class="project-link">
-            <span class="project-name">Linecut</span>
-            <span class="project-type">Custom Match 3 game</span>
-          </a>
-          <a href="https://github.com/arjc/achu-birds" class="project-link">
-            <span class="project-name">Achu Birds</span>
-            <span class="project-type">Angry Birds clone, Matter.js</span>
-          </a>
-          <a href="/memory" class="project-link">
-            <span class="project-name">Memory Game</span>
-            <span class="project-type">Card matching</span>
-          </a>
-        </div>
-
-        <!-- AI -->
-        <div class="project-category">
-          <div class="category-header">
-            <span class="category-icon">(1)</span>
-            <h3 class="category-title">AI ~~&gt;</h3>
-          </div>
-          <a href="https://github.com/arjc/kunjan" class="project-link">
-            <span class="project-name">Kunjan AI [WIP]</span>
-            <span class="project-type">A thullal hasyakala inspired AI</span>
-          </a>
-        </div>
-
-
-        <!-- IoT & Hardware -->
-        <div class="project-category">
-          <div class="category-header">
-            <span class="category-icon">(2)</span>
-            <h3 class="category-title">IoT & Hardware ~~&gt;</h3>
-          </div>
-          <a href="https://github.com/arjc/arduino-music" class="project-link">
-            <span class="project-name">Buzzer Songs</span>
-            <span class="project-type">Arduino piezoelectric music</span>
-          </a>
-          <a href="https://github.com/arjc/arduino-fastflash" class="project-link">
-            <span class="project-name">Fast Flash</span>
-            <span class="project-type">Innefficent Arduino led chaser</span>
-          </a>
-        </div>
-
-        <!-- Design -->
-        <div class="project-category">
-          <div class="category-header">
-            <span class="category-icon">(1)</span>
-            <h3 class="category-title">Design & Prototypes ~~&gt;</h3>
-          </div>
-          <a href="https://figma.com/arjc" class="project-link">
-            <span class="project-name">School App</span>
-            <span class="project-type">UI/UX prototype</span>
-          </a>
-        </div>
-        <!-- OThr -->
-        <div class="project-category">
-          <div class="category-header">
-            <span class="category-icon">(6)</span>
-            <h3 class="category-title">Misc ~~&gt;</h3>
-          </div>
-          <a href="https://nosebyte.github.io/solar/solar.html" class="project-link">
-            <span class="project-name">ASCII Animation</span>
-            <span class="project-type">Python tutorial</span>
-          </a>
-          <a href="https://github.com/arjc/arjun-website" class="project-link">
-            <span class="project-name">Personal Website</span>
-            <span class="project-type">React, Node.js, Firebase</span>
-          </a>
-          <a href="https://github.com/arjc/achufetch" class="project-link">
-            <span class="project-name">Achufetch</span>
-            <span class="project-type">Neofetch-inspired bash script</span>
-          </a>
-          <a href="https://github.com/arjc/arc-compress" class="project-link">
-            <span class="project-name">Arc Compress</span>
-            <span class="project-type">90% ratio compression method</span>
-          </a>
-          <a href="https://github.com/arjc/pavanai" class="project-link">
-            <span class="project-name">Pavanai</span>
-            <span class="project-type">Ventoy bootloader theme</span>
-          </a>
-          <a href="/calculator" class="project-link">
-            <span class="project-name">Malayalam Calculator</span>
-            <span class="project-type">Malayala lipi characters and symbols</span>
-          </a>
-        </div>
+      <div class="reveal project-grid" id="projectArchive" style="--delay: 400ms">
       </div>
 
       <!-- Footer -->

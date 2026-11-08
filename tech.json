@@ -1,0 +1,173 @@
+{
+  "format": "arjctab",
+  "version": 1,
+  "table": {
+    "slug": "tech"
+  },
+  "columns": [
+    {
+      "key": "tech_name",
+      "name": "tech_name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "interest",
+      "name": "interest",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "key": "col",
+      "name": "col",
+      "type": "text",
+      "required": false
+    },
+    {
+      "key": "category",
+      "name": "category",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "records": [
+    {
+      "tech_name": "JavaScript",
+      "interest": false,
+      "col": "#F7DF1E",
+      "category": "Languages"
+    },
+    {
+      "tech_name": "TypeScript",
+      "interest": false,
+      "col": "#3178C6",
+      "category": "Languages"
+    },
+    {
+      "tech_name": "C",
+      "interest": false,
+      "col": "#A8B9CC",
+      "category": "Languages"
+    },
+    {
+      "tech_name": "Python",
+      "interest": false,
+      "col": "#3776AB",
+      "category": "Languages"
+    },
+    {
+      "tech_name": "SQL",
+      "interest": false,
+      "col": "#E38C00",
+      "category": "Languages"
+    },
+    {
+      "tech_name": "React.js",
+      "interest": false,
+      "col": "#61DAFB",
+      "category": "Frontend"
+    },
+    {
+      "tech_name": "Tailwind CSS",
+      "interest": false,
+      "col": "#06B6D4",
+      "category": "Frontend"
+    },
+    {
+      "tech_name": "HTML5",
+      "interest": false,
+      "col": "#E34F26",
+      "category": "Frontend"
+    },
+    {
+      "tech_name": "CSS3",
+      "interest": false,
+      "col": "#1572B6",
+      "category": "Frontend"
+    },
+    {
+      "tech_name": "Three.js",
+      "interest": false,
+      "col": "#000000",
+      "category": "Frontend"
+    },
+    {
+      "tech_name": "Node.js",
+      "interest": false,
+      "col": "#339933",
+      "category": "Backend & Database"
+    },
+    {
+      "tech_name": "MongoDB",
+      "interest": false,
+      "col": "#47A248",
+      "category": "Backend & Database"
+    },
+    {
+      "tech_name": "MySQL",
+      "interest": false,
+      "col": "#4479A1",
+      "category": "Backend & Database"
+    },
+    {
+      "tech_name": "Git",
+      "interest": false,
+      "col": "#F05032",
+      "category": "Tools & DevOps"
+    },
+    {
+      "tech_name": "GitHub",
+      "interest": false,
+      "col": "#181717",
+      "category": "Tools & DevOps"
+    },
+    {
+      "tech_name": "Bash",
+      "interest": false,
+      "col": "#4EAA25",
+      "category": "Tools & DevOps"
+    },
+    {
+      "tech_name": "Vercel",
+      "interest": false,
+      "col": "#000000",
+      "category": "Tools & DevOps"
+    },
+    {
+      "tech_name": "3D Graphics",
+      "interest": true,
+      "col": "#F5792A",
+      "category": "Interests"
+    },
+    {
+      "tech_name": "AI & ML",
+      "interest": true,
+      "col": "#412991",
+      "category": "Interests"
+    },
+    {
+      "tech_name": "Game Dev",
+      "interest": true,
+      "col": "#222C37",
+      "category": "Interests"
+    },
+    {
+      "tech_name": "IoT",
+      "interest": true,
+      "col": "#00979D",
+      "category": "Interests"
+    },
+    {
+      "tech_name": "UI/UX Design",
+      "interest": true,
+      "col": "#F24E1E",
+      "category": "Interests"
+    },
+    {
+      "tech_name": "Problem Solving",
+      "interest": true,
+      "col": "#14BF96",
+      "category": "Interests"
+    }
+  ]
+}

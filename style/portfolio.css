@@ -142,6 +142,11 @@
     border: 1px dashed #4b5563;
 }
 
+.bio-section:empty::before {
+    content: "Loading profile...";
+    color: #6b7280;
+}
+
 .bio-section p {
     margin-bottom: 0.5rem;
 }
