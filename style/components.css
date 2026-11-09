@@ -231,7 +231,7 @@
 
 .navbar-link:hover {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.06);
+    /* background-color: rgba(255, 255, 255, 0.06); */
 }
 
 /* Mobile Dropdown */
@@ -259,12 +259,14 @@
 
 .navbar-dropdown-link:hover {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.06);
+    /* background-color: rgba(255, 255, 255, 0.06); */
 }
 
 /* Portfolio link: mobile only */
 .navbar-link-portfolio {
-    display: none;
+    display: block;
+    border: dashed 1px #374151 !important;
+    border-radius: 0;
 }
 
 /* Desktop: show links, hide arrow */
@@ -327,10 +329,6 @@
     transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.timeline-item:hover {
-    border-left-color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.02);
-}
 
 .timeline-date {
     font-size: 0.7em;
@@ -347,7 +345,7 @@
 }
 
 .timeline-link:hover {
-    color: #60a5fa;
+    color: #fa6060;
 }
 
 /* ===== BADGE/TAG STYLES ===== */
@@ -384,19 +382,13 @@
 .interest-tag {
     padding: 0.25rem 0.75rem;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 1px dashed #374151;
+    /* border: 1px dashed #374151; */
     border-radius: 9999px;
     font-size: 0.875rem;
     color: #d1d5db;
     cursor: default;
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
-
-.interest-tag:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
 /* ===== SOCIAL LINKS ===== */
 
 .social-link {
@@ -405,14 +397,12 @@
     gap: 0.75rem;
     padding: 0.75rem;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 0.5rem;
-    border: 1px dashed #1f2937;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    /* border-radius: 0.5rem; */
+    border: 1px dashed #363636;
     text-decoration: none;
 }
 
 .social-link:hover {
-    background-color: rgba(255, 255, 255, 0.03);
     border-color: #4b5563;
 }
 
@@ -423,7 +413,7 @@
 }
 
 .social-link:hover svg {
-    color: #60a5fa;
+    color: #f00;
 }
 
 .social-link .link-handle {
@@ -454,10 +444,6 @@
     font-size: 1rem;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
-}
-
-.skill-list .skill-tag:hover {
-    background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* ===== BUTTONS ===== */

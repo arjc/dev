@@ -6,6 +6,13 @@
     display: none;
 }
 
+@media (min-width: 767px) {
+    .mobile-only {
+        
+        display: none !important;
+    }
+}
+
 .block {
     display: block;
 }

@@ -77,7 +77,7 @@
 .skeleton-block {
     background: linear-gradient(90deg, rgba(55, 65, 81, 0.35), rgba(156, 163, 175, 0.2), rgba(55, 65, 81, 0.35));
     background-size: 200% 100%;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
     animation: skeleton-shimmer 1.5s linear infinite;
 }
 
@@ -149,14 +149,14 @@
     flex-direction: column;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0.75rem;
+    /* border-radius: 0.75rem; */
     border: 1px dashed #1f2937;
     transition: background-color 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
 }
 
 .featured-card:hover {
-    background-color: rgba(255, 255, 255, 0.03);
+    /* background-color: rgba(255, 255, 255, 0.03); */
     border-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -165,7 +165,7 @@
 }
 
 .featured-card--clickable:focus-visible {
-    outline: 2px solid #60a5fa;
+    outline: 2px solid #fa6060;
     outline-offset: 3px;
 }
 
@@ -191,12 +191,12 @@
 .featured-card .card-title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #adadad;
     transition: color 0.2s ease;
 }
 
 .featured-card:hover .card-title {
-    color: #60a5fa;
+    color: #ffffff;
 }
 
 .featured-card .card-description {
@@ -220,7 +220,7 @@
 }
 
 .featured-card .card-link:hover {
-    color: #60a5fa;
+    color: #fa6060;
 }
 
 /* ===== ARCHIVE SECTION ===== */
@@ -287,7 +287,7 @@
     padding: 0.75rem 1rem;
     background-color: rgba(0, 0, 0, 0.25);
     border: 1px dashed rgba(255, 255, 255, 0.125);
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     transition: background-color 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
 }
@@ -297,7 +297,7 @@
     height: 3rem;
     flex: 0 0 3rem;
     object-fit: cover;
-    border-radius: 0.35rem;
+    /* border-radius: 0.35rem; */
     margin-right: 0.75rem;
 }
 

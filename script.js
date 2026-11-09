@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('visible');
   });
 
+  document.getElementById('profileAge').textContent = `(${new Date().getFullYear() - 2007})`;
+
   loadProjects();
   loadExperience();
   loadProfile();
@@ -56,8 +58,16 @@ async function loadProjects() {
 }
 
 function renderProjects(projects, featuredContainer, archiveContainer) {
-  renderFeaturedProjects(featuredContainer, projects.filter(project => project.high));
+  renderFeaturedProjects(featuredContainer, sortProjectsByDate(projects.filter(project => project.high)));
   renderProjectArchive(archiveContainer, projects);
+}
+
+function sortProjectsByDate(projects) {
+  return [...projects].sort((firstProject, secondProject) => {
+    const firstDate = firstProject.date ? Date.parse(firstProject.date) : Number.NEGATIVE_INFINITY;
+    const secondDate = secondProject.date ? Date.parse(secondProject.date) : Number.NEGATIVE_INFINITY;
+    return secondDate - firstDate;
+  });
 }
 
 function readCachedProjects() {
@@ -141,17 +151,18 @@ function renderProjectArchive(container, projects) {
   });
 
   container.replaceChildren(...Array.from(groups, ([category, categoryProjects]) => {
+    const sortedCategoryProjects = sortProjectsByDate(categoryProjects);
     const section = document.createElement('div');
     section.className = 'project-category';
 
     const header = document.createElement('div');
     header.className = 'category-header';
     header.append(
-      createTextElement('span', 'category-icon', `(${categoryProjects.length})`),
+      createTextElement('span', 'category-icon', `(${sortedCategoryProjects.length})`),
       createTextElement('h3', 'category-title', `${PROJECT_CATEGORIES[category] || 'Other'} ~~>`)
     );
     section.appendChild(header);
-    categoryProjects.forEach(project => section.appendChild(createProjectLink(project)));
+    sortedCategoryProjects.forEach(project => section.appendChild(createProjectLink(project)));
     return section;
   }));
 }
@@ -263,6 +274,14 @@ function getProjectYear(date) {
   return date ? String(date).slice(0, 4) : '';
 }
 
+function sortEntriesByStartDate(entries) {
+  return [...entries].sort((firstEntry, secondEntry) => {
+    const firstDate = firstEntry.from ? Date.parse(firstEntry.from) : Number.NEGATIVE_INFINITY;
+    const secondDate = secondEntry.from ? Date.parse(secondEntry.from) : Number.NEGATIVE_INFINITY;
+    return secondDate - firstDate;
+  });
+}
+
 async function loadExperience() {
   const educationContainer = document.getElementById('educationEntries');
   const experienceContainer = document.getElementById('experienceEntries');
@@ -278,8 +297,8 @@ async function loadExperience() {
       throw new Error('Experience API returned an invalid data format');
     }
 
-    const education = result.data.filter(entry => entry.education);
-    const experience = result.data.filter(entry => !entry.education);
+    const education = sortEntriesByStartDate(result.data.filter(entry => entry.education));
+    const experience = sortEntriesByStartDate(result.data.filter(entry => !entry.education));
     educationContainer.replaceChildren(...education.map(createTimelineItem));
     experienceContainer.replaceChildren(...experience.map(createTimelineItem));
   } catch (error) {
@@ -487,7 +506,7 @@ function togglePortfolio() {
   const portfolio = document.querySelector('.portfolio');
   const dropdown = document.getElementById('mobileMenu');
   const arrow = document.querySelector('.navbar-arrow');
-  const title = document.querySelector('.navbar-title');
+  const portfolioButton = document.querySelector('.navbar-link-portfolio');
 
   // Close mobile menu if open
   if (dropdown) {
@@ -499,11 +518,10 @@ function togglePortfolio() {
     portfolio.style.display = 'flex';
     portfolioOpen = true;
 
-    // On mobile, swap brand to "← Back"
+    // On mobile, turn the portfolio control into a close button.
     if (window.innerWidth < 1280) {
       document.body.style.overflow = 'hidden';
-      title.textContent = '← Back';
-      title.classList.add('navbar-title--back');
+      portfolioButton.textContent = 'X';
       arrow.style.display = 'none';
     }
   } else {
@@ -511,9 +529,7 @@ function togglePortfolio() {
     portfolioOpen = false;
     document.body.style.overflow = '';
 
-    // Restore brand
-    title.textContent = 'Dev';
-    title.classList.remove('navbar-title--back');
+    portfolioButton.textContent = 'Portfolio';
     arrow.style.display = '';
   }
 }
@@ -521,7 +537,7 @@ function togglePortfolio() {
 // Reset portfolio state on resize
 window.addEventListener('resize', () => {
   const portfolio = document.querySelector('.portfolio');
-  const title = document.querySelector('.navbar-title');
+  const portfolioButton = document.querySelector('.navbar-link-portfolio');
   const arrow = document.querySelector('.navbar-arrow');
 
   if (window.innerWidth >= 1280) {
@@ -529,8 +545,7 @@ window.addEventListener('resize', () => {
     portfolio.style.display = '';
     portfolioOpen = false;
     document.body.style.overflow = '';
-    title.textContent = 'Dev';
-    title.classList.remove('navbar-title--back');
+    portfolioButton.textContent = 'Portfolio';
     arrow.style.display = '';
   } else if (portfolioOpen) {
     portfolio.style.display = 'flex';

@@ -25,33 +25,39 @@
       <!-- Logo -->
       <div class="navbar-brand" onclick="toggleMobileMenu()">
         <img src="assets/face.webp" alt="achu" class="navbar-logo" />
-        <span class="navbar-title">Dev</span>
+        <span class="navbar-title">ARJUN</span>
         <svg class="navbar-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
+      
+      <span class="navbar-link navbar-link-portfolio" onclick="togglePortfolio()">Portfolio</span>
 
       <!-- Desktop Links -->
       <div class="navbar-links">
+        <a href="#linkExp" class="navbar-dropdown-link">Experience</a>
+        <a href="#linkPro" class="navbar-dropdown-link">Projects</a>
         <a href="https://www.arjc.me" target="_blank" class="navbar-link">Website</a>
         <a href="https://linkedin.com/in/arjc" target="_blank" class="navbar-link">LinkedIn</a>
         <a href="https://github.com/arjc" target="_blank" class="navbar-link">GitHub</a>
-        <a href="#contact" class="navbar-link">Contact</a>
+        <a href="mailto:arjcwo@gmail.com" class="navbar-dropdown-link">Email</a>
       </div>
     </div>
 
     <!-- Mobile Dropdown -->
     <div class="navbar-dropdown" id="mobileMenu">
-      <span class="navbar-dropdown-link" onclick="togglePortfolio()">Portfolio</span>
+      <a href="#linkPro" class="navbar-dropdown-link">All projects</a>
       <a href="https://www.arjc.me" target="_blank" class="navbar-dropdown-link">Visit Website</a>
       <a href="https://linkedin.com/in/arjc" target="_blank" class="navbar-dropdown-link">LinkedIn</a>
       <a href="https://github.com/arjc" target="_blank" class="navbar-dropdown-link">GitHub</a>
-      <a href="mailto:arjcwo@gmail.com" class="navbar-dropdown-link">Contact</a>
+      <a href="mailto:arjcwo@gmail.com" class="navbar-dropdown-link">Email</a>
     </div>
   </nav>
 
   <!-- Main Wrapper -->
   <div class="main-wrapper">
+
+    
     <!-- Portfolio Sidebar -->
     <div class="portfolio">
       <div class="scroll-indicator">
@@ -61,96 +67,23 @@
       <!-- Hero -->
       <div class="portfolio-hero">
         <span class="reveal hero-name" id="profileNameHero" style="--delay: 200ms">
-          Arjun M L
+          Arjun M Liji
         </span>
         <span class="reveal hero-tag" style="--delay: 300ms">FULL STACK</span>
         <span class="reveal hero-tag" style="--delay: 300ms">&lt;DEV&gt;</span>
         <span class="reveal hero-tag" style="--delay: 400ms">PORTFOLIO</span>
       </div>
 
-      <!-- Status Badge -->
-      <div class="reveal status-badge" style="--delay: 450ms">
-        <span class="status-dot"></span>
-        <span id="profileStatus">Currently learning @ University - NSSCE Palakkad</span>
-      </div>
+      <!-- Link -->
 
-      <!-- Profile Section -->
-      <h1 class="reveal" style="--delay: 500ms">About me ~~></h1>
-      <div class="reveal profile-card" style="--delay: 550ms">
-        <h1 class="profile-name">
-          <span id="profileName">Arjun M L</span>
-          <span class="profile-age">(19)</span>
-          <span class="profile-location">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 
-                    7.5H.5a.5.5 0 0 0 0 1h.518A7 7 0 0 0 7.5 
-                    14.982v.518a.5.5 0 0 0 1 0v-.518A7 7 0 0 0 
-                    14.982 8.5h.518a.5.5 0 0 0 0-1h-.518A7 7 0 0 0 8.5 
-                    1.018zm-6.48 7A6 6 0 0 1 7.5 2.02v.48a.5.5 0 0 0 1 
-                    0v-.48a6 6 0 0 1 5.48 5.48h-.48a.5.5 0 0 0 0 
-                    1h.48a6 6 0 0 1-5.48 5.48v-.48a.5.5 0 0 0-1 
-                    0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 
-                    0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
-            </svg>
-            <span id="profilePlace">Kochi, Kerala</span>
-          </span>
-        </h1>
-          <img class="profile-img" src="assets/rayban.jpg" alt="profile pic of achukuttan aka Arjun M Liji" />
-      </div>
-
-      <!-- Download CV -->
-      <a href="#" onclick="alert('No data please check again'); return false;" class="reveal download-cv-btn"
-        style="--delay: 620ms; margin: 5px 0 20px 0;">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3" />
-        </svg>
-        Download CV
-      </a>
-
-      <!-- Bio Section -->
-      <div class="reveal bio-section" id="profileBrief" style="--delay: 600ms">
-      </div>
-
-      <br><br><br>
-
-      <!-- Education -->
-      <h1 class="reveal" style="--delay: 700ms">Education ~~></h1>
-      <div class="reveal" id="educationEntries" style="--delay: 750ms">
-      </div>
-
-      <br><br><br>
-
-      <!-- Experience -->
-      <h1 class="reveal section-title" style="--delay: 800ms">Experience ~~></h1>
-      <div class="reveal" id="experienceEntries" style="--delay: 900ms">
-      </div>
-
-      <br><br><br>
-
-      <!-- Skills -->
-      <h1 class="reveal section-title" style="--delay: 950ms">Tech Stack ~~></h1>
-      <div class="reveal skills-section" style="--delay: 1000ms">
-        <ul class="skill-list" id="techStackList"></ul>
-      </div>
-
-      <br><br><br>
-
-      <!-- Interests -->
-      <h1 class="reveal section-title" style="--delay: 1050ms">Interests ~~></h1>
-      <div class="reveal interests-list" id="interestsList" style="--delay: 1100ms"></div>
-
-      <br><br><br>
-
-      <!-- Contact / Social -->
-      <h1 class="reveal section-title" style="--delay: 1150ms">Connect ~~></h1>
+            <!-- Contact / Social
+      <h1 class="reveal section-title" style="--delay: 1150ms">Connect ~~></h1> -->
       <div class="reveal social-section" style="--delay: 1200ms">
         <a href="https://github.com/arjc" target="_blank" class="social-link">
           <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
             <path
               d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
           </svg>
-          <span class="social-name">GitHub</span>
           <span class="social-handle">@arjc</span>
         </a>
         <a href="https://linkedin.com/in/arjc" target="_blank" class="social-link">
@@ -158,7 +91,6 @@
             <path
               d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
           </svg>
-          <span class="social-name">LinkedIn</span>
           <span class="social-handle">in/arjc</span>
         </a>
         <a href="mailto:arjcwo@gmail.com" class="social-link">
@@ -166,44 +98,104 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <span class="social-name">Email</span>
-          <span class="social-handle">arjcwo@gmail.com</span>
+          <span class="social-handle">email</span>
         </a>
         <a href="https://www.arjc.me" target="_blank" class="social-link">
           <svg class="social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
           </svg>
-          <span class="social-name">Website</span>
           <span class="social-handle">arjc.me</span>
         </a>
       </div>
+      
+      <!-- Profile Section -->
+      <h1 class="reveal" style="--delay: 500ms">About me ~~></h1>
+      <div class="reveal profile-card" style="--delay: 550ms">
+        <div class="profile-name">
+          <span id="profileName" style="font-size: 0.9em;">Arjun M Liji</span>
+          <span class="profile-age" id="profileAge"></span>
+          <span class="profile-location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 
+              7.5H.5a.5.5 0 0 0 0 1h.518A7 7 0 0 0 7.5 
+              14.982v.518a.5.5 0 0 0 1 0v-.518A7 7 0 0 0 
+              14.982 8.5h.518a.5.5 0 0 0 0-1h-.518A7 7 0 0 0 8.5 
+              1.018zm-6.48 7A6 6 0 0 1 7.5 2.02v.48a.5.5 0 0 0 1 
+              0v-.48a6 6 0 0 1 5.48 5.48h-.48a.5.5 0 0 0 0 
+              1h.48a6 6 0 0 1-5.48 5.48v-.48a.5.5 0 0 0-1 
+              0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 
+              0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
+            </svg>
+            <span id="profilePlace">Kochi, Keralam In</span>
+          </span>
+          
+                <!-- Status Badge -->
+                <div class="reveal status-badge" style="--delay: 450ms">
+                  <!-- <span class="status-dot"></span> -->
+                  <span id="profileStatus">Starting backend... <br /> Waiting 4 backend...</span>
+                </div>
+                <!-- Download CV -->
+      <a href="#" onclick="alert('No data please check again'); return false;" class="reveal download-cv-btn"
+        style="--delay: 620ms; margin: 5px 0 20px 0;">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3" />
+        </svg>
+        Resume
+      </a>
+        </div>
+          <!-- <img class="profile-img" src="assets/photo.webp" alt="Professional headshot of achukuttan aka Arjun M Liji" /> -->
+          <img class="profile-img" src="assets/rayban.jpg" alt="kanasa kunasa pic of achukuttan aka Arjun M Liji" />
+        </div>
+        <!-- Bio Section -->
+        <div class="reveal bio-section" id="profileBrief" style="--delay: 600ms">
+        </div><br>
+
+      <!-- Interests -->
+      <h1 class="reveal section-title" style="--delay: 1050ms">Interests ~~></h1>
+      <div class="reveal interests-list" id="interestsList" style="--delay: 1100ms"></div><br>
+
+      <!-- Education -->
+      <h1 class="reveal" style="--delay: 700ms">Education ~~></h1>
+      <div class="reveal" id="educationEntries" style="--delay: 750ms">
+      </div><br>
+      
+      <!-- Skills -->
+      <h1 class="reveal section-title" style="--delay: 950ms">Skills ~~></h1>
+      <div class="reveal skills-section" style="--delay: 1000ms">
+        <ul class="skill-list" id="techStackList"></ul>
+      </div><br>
+
+
     </div>
 
     <!-- Projects Section -->
     <div class="projects-section">
       <!-- Spacer for nav -->
-      <div class="nav-spacer"></div>
-
+      <br> <br>
       <!-- Featured Section Header -->
       <div class="reveal section-header" style="--delay: 100ms">
-        <span class="section-label">// Featured Work</span>
-        <h1>My Projects</h1>
+        <h1>Featured Work ~~></h1>
         <p class="section-description">See my 4 years worth of journey builing websites, simulations, games and more...
         </p>
       </div>
-
-      <!-- Featured Projects Grid -->
       <div class="reveal featured-grid" id="featuredProjects" style="--delay: 200ms">
       </div>
-
-      <!-- All Projects Section -->
-      <div class="reveal archive-header" style="--delay: 300ms">
-        <span class="section-label">// All Work</span>
-        <h2>Project Archive ~~&gt;</h2>
+      <h2 id="linkExp" style="margin: 2vh auto;">~~ *** ~~</h2>
+      
+      <!-- Experience -->
+      <h1 class="reveal section-title" style="--delay: 300ms">Experience / Activities ~~></h1>
+      <div class="reveal" id="experienceEntries" style="--delay: 400ms">
       </div>
-
-      <div class="reveal project-grid" id="projectArchive" style="--delay: 400ms">
+      
+      <!-- All Projects Section -->
+      <h2 id="linkPro" style="margin: 2vh auto;">~~ *** ~~</h2>
+      <div class="reveal archive-header" style="--delay: 500ms">
+        <!-- <span class="section-label">// All Work</span> -->
+        <h1>Project Archive ~~&gt;</h1>
+      </div>
+      <div class="reveal project-grid" id="projectArchive" style="--delay: 600ms">
       </div>
 
       <!-- Footer -->
