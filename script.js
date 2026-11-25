@@ -3,19 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('visible');
   });
 
-  document.getElementById('profileAge').textContent = `(${new Date().getFullYear() - 2007})`;
+  const profileAge = `(${new Date().getFullYear() - 2007})`;
+  document.getElementById('profileAge').textContent = profileAge;
+  document.getElementById('mobileProfileAge').textContent = profileAge;
 
   loadProjects();
   loadExperience();
   loadProfile();
+  loadProfileItems();
   loadTech();
 });
 
 const PROJECTS_API_URL = 'https://arjc-back.onrender.com/api/projects';
 const EXPERIENCE_API_URL = 'https://arjc-back.onrender.com/api/exp';
 const PROFILE_API_URL = 'https://arjc-back.onrender.com/api/profile';
+const PROFILE_ITEMS_API_URL = 'https://arjc-back.onrender.com/api/prof';
 const TECH_API_URL = 'https://arjc-back.onrender.com/api/tech';
 const PROJECTS_CACHE_KEY = 'arjc-projects-cache';
+let projectsForFeaturedWork = [];
+let profileItemsForFeaturedWork = [];
 const PROJECT_CATEGORIES = {
   0: 'Hardware',
   1: 'Simulation / Game',
@@ -58,8 +64,19 @@ async function loadProjects() {
 }
 
 function renderProjects(projects, featuredContainer, archiveContainer) {
-  renderFeaturedProjects(featuredContainer, sortProjectsByDate(projects.filter(project => project.high)));
+  projectsForFeaturedWork = sortProjectsByDate(projects.filter(project => project.high));
+  renderFeaturedWork(featuredContainer);
   renderProjectArchive(archiveContainer, projects);
+}
+
+function renderFeaturedWork(container) {
+  const featuredItems = [
+    ...projectsForFeaturedWork.map(project => createFeaturedCard(project)),
+    ...profileItemsForFeaturedWork
+      .filter(item => item.featured)
+      .map(item => createProfileItemCard(item))
+  ];
+  container.replaceChildren(...featuredItems);
 }
 
 function sortProjectsByDate(projects) {
@@ -98,8 +115,8 @@ function renderProjectSkeletons(featuredContainer, archiveContainer) {
   );
 }
 
-function createLoadingMessage() {
-  const message = createTextElement('p', 'projects-loading-message', 'loading projects...');
+function createLoadingMessage(text = 'loading projects...') {
+  const message = createTextElement('p', 'projects-loading-message', text);
   message.setAttribute('aria-live', 'polite');
   return message;
 }
@@ -134,10 +151,6 @@ function createArchiveSkeleton(index) {
     `).join('')}
   `;
   return section;
-}
-
-function renderFeaturedProjects(container, projects) {
-  container.replaceChildren(...projects.map(createFeaturedCard));
 }
 
 function renderProjectArchive(container, projects) {
@@ -210,6 +223,98 @@ function createFeaturedCard(project) {
 
   info.appendChild(footer);
   card.append(image, info);
+  return card;
+}
+
+async function loadProfileItems() {
+  const publicationContainer = document.getElementById('researchEntries');
+  const posterContainer = document.getElementById('posterEntries');
+
+  publicationContainer.replaceChildren(createLoadingMessage('loading publications...'));
+  posterContainer.replaceChildren(createLoadingMessage('loading posters...'));
+
+  try {
+    const response = await fetch(PROFILE_ITEMS_API_URL, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Posters and publications API returned ${response.status}`);
+    }
+
+    const result = await response.json();
+    if (!result || !Array.isArray(result.data)) {
+      throw new Error('Posters and publications API returned an invalid data format');
+    }
+
+    profileItemsForFeaturedWork = result.data;
+    renderFeaturedWork(document.getElementById('featuredProjects'));
+    renderProfileItems(
+      publicationContainer,
+      result.data.filter(item => item.publication),
+      'No publications have been added yet.'
+    );
+    renderProfileItems(
+      posterContainer,
+      result.data.filter(item => item.poster),
+      'No posters have been added yet.'
+    );
+  } catch (error) {
+    console.error('Unable to load posters and publications:', error);
+    const message = 'Posters and publications are currently unavailable. Please try again later.';
+    publicationContainer.replaceChildren(createProjectMessage(message));
+    posterContainer.replaceChildren(createProjectMessage(message));
+  }
+}
+
+function renderProfileItems(container, items, emptyMessage) {
+  if (items.length === 0) {
+    container.replaceChildren(createProjectMessage(emptyMessage));
+    return;
+  }
+
+  container.replaceChildren(...items.map(createProfileItemCard));
+}
+
+function createProfileItemCard(item) {
+  const card = document.createElement('article');
+  card.className = 'featured-card profile-item-card';
+
+  if (item.thumb) {
+    const image = document.createElement('img');
+    image.className = 'card-img';
+    image.src = item.thumb;
+    image.alt = `${item.name || 'Portfolio item'} thumbnail`;
+    image.loading = 'lazy';
+    card.appendChild(image);
+  }
+
+  const info = document.createElement('div');
+  info.className = 'card-info';
+  info.appendChild(createTextElement('h3', 'card-title', `${item.name || 'Untitled'} ~~>`));
+
+  if (item.desc) {
+    info.appendChild(createTextElement('p', 'card-description', item.desc));
+  }
+
+  const footer = document.createElement('div');
+  footer.className = 'card-footer';
+  footer.appendChild(createTextElement('span', 'card-year', getProjectYear(item.date)));
+
+  // HIghlight label
+  // if (item.featured) {
+  //   footer.appendChild(createTextElement('span', 'card-featured-label', 'Highlight'));
+  // }
+
+  if (item.link && /^https?:\/\//i.test(item.link)) {
+    const link = document.createElement('a');
+    link.className = 'card-link';
+    link.href = item.link;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'view ~~>';
+    footer.appendChild(link);
+  }
+
+  info.appendChild(footer);
+  card.appendChild(info);
   return card;
 }
 
@@ -333,12 +438,15 @@ async function loadProfile() {
     if (profile.name) {
       name.textContent = profile.name;
       heroName.textContent = profile.name;
+      document.getElementById('mobileProfileName').textContent = profile.name;
     }
     if (profile.place) {
       place.textContent = profile.place;
+      document.getElementById('mobileProfilePlace').textContent = profile.place;
     }
     if (profile.current) {
       status.textContent = profile.current;
+      document.getElementById('mobileProfileStatus').textContent = profile.current;
     }
     if (profile.brief) {
       brief.innerHTML = profile.brief;

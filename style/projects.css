@@ -24,6 +24,66 @@
     display: none;
 }
 
+.mobile-profile-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+.mobile-profile-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.mobile-profile-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.mobile-profile-card .profile-age {
+    margin-left: 0.25rem;
+}
+
+.mobile-profile-card .profile-location {
+    margin-top: 0.25rem;
+}
+
+.mobile-profile-card .status-badge {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+}
+
+.mobile-profile-card .profile-img {
+    width: 5.5rem;
+    height: 5.5rem;
+    min-height: 0;
+    max-width: 5.5rem;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.mobile-profile-card .mobile-resume-btn {
+    margin: 0.65rem 0 0;
+}
+
+.mobile-profile-card .profile-actions .github-profile-btn,
+.mobile-profile-card .profile-actions .website-profile-btn {
+    margin: 0.65rem 0 0;
+}
+
+@media (min-width: 767px) {
+    .mobile-profile-card {
+        display: none;
+    }
+}
+
 /* ===== NAV SPACER ===== */
 
 .nav-spacer {
@@ -60,6 +120,21 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+}
+
+.publication-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card-featured-label {
+    color: #fa6060;
+    font-size: 0.75rem;
+    font-family: "JetBrains Mono", monospace;
+    margin-left: auto;
+    margin-right: 1em;
+    padding-left: 0.75rem;
 }
 
 .projects-loading-message {
@@ -366,6 +441,10 @@
 
 @media (min-width: 1024px) {
     .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .publication-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 

@@ -194,7 +194,7 @@
       "date": null,
       "img": "https://placehold.co/600x400/1f2937/ffffff?text=Memory+Game",
       "repo": null,
-      "live": "https://arjc.me/memory",
+      "live": "https://arjc.github.io/memory",
       "cat": 1,
       "short_desc": "Card matching",
       "high": false
@@ -290,7 +290,7 @@
       "date": null,
       "img": "https://placehold.co/600x400/1f2937/ffffff?text=Malayalam+Calculator",
       "repo": null,
-      "live": "https://arjc.me/calculator",
+      "live": "https://arjc.github.io/calculator",
       "cat": 5,
       "short_desc": "Malayalam lipi calculator",
       "high": false

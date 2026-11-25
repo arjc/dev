@@ -127,7 +127,7 @@
     min-height: 2.5rem;
     max-width: 7em;
     /* border-radius: 0.1rem; */
-    border: 1px dashed #374151;
+    /* border: 1px dashed #374151; */
 }
 
 /* ===== BIO SECTION ===== */
@@ -226,6 +226,21 @@
 
 .download-cv-btn svg {
     flex-shrink: 0;
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.profile-actions .github-profile-btn,
+.profile-actions .website-profile-btn {
+    justify-content: center;
+    min-width: 2.75rem;
+    padding: 0.5rem;
+    margin: 5px 0 20px;
 }
 
 /* ===== SOCIAL SECTION ===== */
